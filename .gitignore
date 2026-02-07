@@ -1,10 +1,10 @@
 /htdocs
 /*.pyc
-/html/copy/jquery-ui.min.js
-/html/copy/jquery.min.js
-/html/copy/MathJax.js
-/html/copy/config
-/html/copy/jax
-/html/copy/*.woff
+/_layout/copy/jquery-ui.min.js
+/_layout/copy/jquery.min.js
+/_layout/copy/MathJax.js
+/_layout/copy/config
+/_layout/copy/jax
+/_layout/copy/*.woff
 .DS_Store
 /__pycache__

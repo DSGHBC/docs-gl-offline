@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset='utf-8'>
 	<title>docs.gl</title>
@@ -58,7 +59,7 @@
 			border-radius: 4px;
 			outline: none;
 			padding: 1px;
-			float:left;
+			float: left;
 		}
 
 		.center-container {
@@ -79,7 +80,9 @@
 			display: none;
 		}
 
-		.commandcolumn, .versioncolumn, .slversioncolumn {
+		.commandcolumn,
+		.versioncolumn,
+		.slversioncolumn {
 			display: block;
 			float: left;
 			margin: 4px;
@@ -113,24 +116,27 @@
 			padding: 4px;
 			margin-bottom: 10px;
 			display: inline-block;
-		  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-		  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
-		  box-sizing: border-box;         /* Opera/IE 8+ */
+			-webkit-box-sizing: border-box;
+			/* Safari/Chrome, other WebKit */
+			-moz-box-sizing: border-box;
+			/* Firefox, other Gecko */
+			box-sizing: border-box;
+			/* Opera/IE 8+ */
 		}
 	</style>
 	<link id="mediastyle" href="media.css" rel="stylesheet" type="text/css" />
 	<script>
-		$(function() {
+		$(function () {
 			window.search_api = "all";
 
-			front_filter_fn = function() {
+			front_filter_fn = function () {
 				version = window.search_api.replace(".", "");
 				if (!version || typeof version == 'undefined')
 					version = 'all';
 
 				search_str = $("#frontsearch").val().toLowerCase();
 
-				hide_commands = function() {
+				hide_commands = function () {
 					$(this).addClass("hidden");
 
 					command_search = $(".commandsearch", this).text().toLowerCase();
@@ -156,9 +162,9 @@
 
 			window.base_directory = "";
 
-			$( "#version-select" ).selectmenu({
+			$("#version-select").selectmenu({
 				width: 75,
-				change: function( event, ui ) {
+				change: function (event, ui) {
 					window.search_api = ui.item.value;
 					//set_api_version(ui.item.value);
 					front_filter_fn();
@@ -172,16 +178,16 @@
 				front_filter_fn()
 			}
 
-			$("#light-toggle").click(function() {
+			$("#light-toggle").click(function () {
 				$("#pagestyle").attr("href", "style_light.css");
-				$.cookie("pagestyle", "light", {path: '/'});
+				$.cookie("pagestyle", "light", { path: '/' });
 			});
 
-			$("#dark-toggle").click(function() {
+			$("#dark-toggle").click(function () {
 				$("#pagestyle").attr("href", "style_dark.css");
-				$.cookie("pagestyle", "dark", {path: '/'});
+				$.cookie("pagestyle", "dark", { path: '/' });
 			});
-			
+
 			if ($.cookie("pagestyle") == 'light')
 				$("#light-toggle").click();
 
@@ -194,9 +200,10 @@
 			if ($.cookie("pagestyle") == 'dark')
 				$("#pagestyle").attr("href", "style_dark.css");*/
 		});
-</script>
+	</script>
 
 </head>
+
 <body>
 
 	<div style="width: 950px; margin-left: auto; margin-right: auto; text-align: right">
@@ -206,8 +213,8 @@
 			<h1 class="logo">docs.<span class="thicken">GL</span></h1>
 			<p class="logo-desc">OpenGL API Documentation</p>
 			<div class="toggle-container">
-					<a href="about.html">about docs.gl</a><br/>
-					<a id="light-toggle" href="#">Light</a> | <a id="dark-toggle" href="#">Dark</a>
+				<a href="about.html">about docs.gl</a><br />
+				<a id="light-toggle" href="#">Light</a> | <a id="dark-toggle" href="#">Dark</a>
 			</div>
 		</div>
 	</div>
@@ -242,4 +249,5 @@
 	</div>
 	<div id="commandlist">{$commandlist}</div>
 </body>
+
 </html>
