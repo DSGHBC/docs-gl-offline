@@ -5,7 +5,7 @@ A fork of [docs.gl](https://github.com/BSVino/docs.gl) optimized for stable offl
 
 ```bash
 python compile.py --local-assets
-python start_offline_fixed.py
+python start_offline_webserver.py
 # Visit http://localhost:8000
 ```
 
